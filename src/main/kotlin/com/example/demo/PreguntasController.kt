@@ -7,17 +7,23 @@ import org.springframework.web.bind.annotation.RestController
 @RestController
 class PreguntasController {
 
-    @GetMapping("Preguntas")
-    fun enviarlistaPokemon() : List<Preguntas> {
+    @GetMapping("Pregunta")
+    fun enviarPregunta() : List<Preguntas> {
         println("Me han dicho algo")
         return PreguntasRepository.listaPreguntas
     }
-    @GetMapping("Preguntas{id}")
-    fun enviarlistaFavoritoPokemon(@PathVariable id: Int) : String {
+    @GetMapping("Pregunta{id}")
+    fun enviarPregunta(@PathVariable id: Int) : String {
         if (id < PreguntasRepository.listaPreguntas.size)
             return PreguntasRepository.listaPreguntas[id].toString()
         else
-            return "Ese Pokemon no esta "
+            return "Esta Pregunta no existe "
     }
-
+    @GetMapping("Pregunta{id}/{respuesta}")
+    fun enviarRespuesta(@PathVariable id: Int) : String {
+        if (id < PreguntasRepository.listaPreguntas.size)
+            return RespuestasRepository.listaRespuestas[id].toString()
+        else
+            return "Esta Respuesta es incorrecta "
+    }
 }
