@@ -9,3 +9,9 @@ data class Preguntas (var pregunta :String, var respuestas:String){
         return gson.toJson(this)
     }
 }
+data class Respuestas (var respuesta :String){
+    override  fun toString() : String{
+        val gson = Gson()
+        return gson.toJson(this)
+    }
+}
