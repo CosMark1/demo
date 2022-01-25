@@ -21,8 +21,8 @@ class PreguntasController {
     }
     @GetMapping("Pregunta{id}/{respuesta}")
     fun enviarRespuesta(@PathVariable id: Int) : String {
-        if (id < PreguntasRepository.listaPreguntas.size)
-            return RespuestasRepository.listaRespuestas[id].toString()
+        if (id == PreguntasRepository.listaPreguntas.size)
+            return "Esta Respuesta es correcta "
         else
             return "Esta Respuesta es incorrecta "
     }
