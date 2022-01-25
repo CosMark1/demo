@@ -20,8 +20,8 @@ class PreguntasController {
             return "Esta Pregunta no existe "
     }
     @GetMapping("Pregunta{id}/{respuesta}")
-    fun enviarRespuesta(@PathVariable id: Int, @PathVariable respuesta : String) : String {
-        if (respuesta == RespuestasRepository.listaRespuestas[id])
+    fun enviarRespuesta(@PathVariable id: Int, @PathVariable respuestas: Respuestas ) : String {
+        if (respuestas == RespuestasRepository.listaRespuestas[id])
             return "Esta Respuesta es correcta "
         else
             return "Esta Respuesta es incorrecta "
