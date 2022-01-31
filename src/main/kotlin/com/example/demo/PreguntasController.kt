@@ -22,6 +22,6 @@ class PreguntasController {
                 return "Esta Respuesta es incorrecta "
 
         }
-        return "No hay mas preguntas"
+        return "Esa pregunta no existe, prueba con una pregunta mayor o menor a la que has dado"
     }
 }
