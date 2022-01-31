@@ -13,7 +13,7 @@ class PreguntasController {
         var id = Random.nextInt(Repository.listaPreguntas.size)
         return Repository.listaPreguntas[id].toString()
     }
-    @GetMapping("Respuesta{id}/{respuesta}")
+    @GetMapping("Pregunta{id}/{respuestas}")
     fun enviarRespuesta(@PathVariable id: Int, @PathVariable respuestas: String ) : String {
         if(id < Repository.listaPreguntas.size) {
             if (Repository.listaRespuestas[id].respuesta == respuestas) {
