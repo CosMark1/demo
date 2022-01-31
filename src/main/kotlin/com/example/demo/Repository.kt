@@ -1,7 +1,19 @@
 package com.example.demo
 
-public class PreguntasRepository {
+class Repository {
     companion object {
+        var listaRespuestas = listOf(
+            Respuestas("Madrid"),
+            Respuestas( "Paris"),
+            Respuestas("Bélgica"),
+            Respuestas("Moscú"),
+            Respuestas("Atenas"),
+            Respuestas("Washington D.C"),
+            Respuestas("Lisboa"),
+            Respuestas("Tokio"),
+            Respuestas( "Pekín"),
+            Respuestas("Bucarest")
+        )
         var listaPreguntas = listOf(
             Preguntas("Capital de España","Madrid - Paris - Bélgica - Atenas"),
             Preguntas("Capital de Francia","Moscú - Paris - Bucarest - Lisboa"),
