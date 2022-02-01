@@ -3,7 +3,7 @@ package com.example.demo
 class Repository {
     companion object {
         var listaRespuestas = listOf(
-            Respuestas("Default"),
+
             Respuestas("Madrid"),
             Respuestas( "Paris"),
             Respuestas("Bélgica"),
@@ -16,7 +16,7 @@ class Repository {
             Respuestas("Bucarest")
         )
         var listaPreguntas = listOf(
-            Preguntas("Pregunta Default","Capital de X"," P - X - Y - Z "),
+
             Preguntas("Pregunta 1","Capital de España","Madrid - Paris - Bélgica - Atenas"),
             Preguntas("Pregunta 2","Capital de Francia","Moscú - Paris - Bucarest - Lisboa"),
             Preguntas("Pregunta 3","Capital de Alemania","Bélgica - Moscú - Washington D.C - Tokio"),
